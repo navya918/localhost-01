@@ -34,7 +34,7 @@ const UpdateContacts = () => {
         const fetchData = async () => {
 
           try {
-            const response = await axios.get(`http://localhost:8085/apis/employees/contacts/contacts/${contactId}`,{
+            const response = await axios.get(`https://teamwebapp123.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`,{
                 headers: {
                   "Authorization": `Bearer ${token}`  // Add the token to the Authorization header
                 }
