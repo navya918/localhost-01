@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e0e93576.css",
+    "main.js": "/static/js/main.f9ffac5c.js",
+    "static/js/239.562e318c.chunk.js": "/static/js/239.562e318c.chunk.js",
+    "static/js/213.e96be394.chunk.js": "/static/js/213.e96be394.chunk.js",
+    "static/js/732.389f1e56.chunk.js": "/static/js/732.389f1e56.chunk.js",
+    "static/js/453.31c363cf.chunk.js": "/static/js/453.31c363cf.chunk.js",
+    "static/media/searcherror.png": "/static/media/searcherror.6c8c9eb93b6f9d071862.png",
+    "static/media/MTlogo.svg": "/static/media/MTlogo.f5b2552b45f671fb4879921ba5015c93.svg",
+    "static/media/Gold.jpeg": "/static/media/Gold.90bf7384775fa8b55de5.jpeg",
+    "static/media/Silver.jpeg": "/static/media/Silver.40f6511168cd7b7c8f91.jpeg",
+    "static/media/Bronze.jpeg": "/static/media/Bronze.da94f4db88f8a26574aa.jpeg",
+    "static/media/Empty.svg": "/static/media/Empty.a21c82450acd64d3ead63532a7048867.svg",
+    "index.html": "/index.html",
+    "main.e0e93576.css.map": "/static/css/main.e0e93576.css.map",
+    "main.f9ffac5c.js.map": "/static/js/main.f9ffac5c.js.map",
+    "239.562e318c.chunk.js.map": "/static/js/239.562e318c.chunk.js.map",
+    "213.e96be394.chunk.js.map": "/static/js/213.e96be394.chunk.js.map",
+    "732.389f1e56.chunk.js.map": "/static/js/732.389f1e56.chunk.js.map",
+    "453.31c363cf.chunk.js.map": "/static/js/453.31c363cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0e93576.css",
+    "static/js/main.f9ffac5c.js"
+  ]
+}
