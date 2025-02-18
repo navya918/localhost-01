@@ -1,6 +1,6 @@
 import axios from 'axios';
  
-const BASE_URL = 'https://teamwebapp123.azurewebsites.net/api/v1/employeeManager';
+const BASE_URL = 'http://40.75.121.168:8089/api/v1/employeeManager';
  
 export const getEmployeeDetails = async (employeeId) => {
    

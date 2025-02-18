@@ -75,7 +75,7 @@ function LeaveRequestForm(props) {
             const token = localStorage.getItem('token')
            
             const [originResponse] = await Promise.all([
-                axios.get(`https://teamwebapp123.azurewebsites.net/api/v1/employeeManager/origin/${employeeId}`, {
+                axios.get(`http://40.75.121.168:8089/api/v1/employeeManager/origin/${employeeId}`, {
                     method: 'GET',
                     headers: {
                       'Authorization' : `Bearer ${token}`,
@@ -151,7 +151,7 @@ function LeaveRequestForm(props) {
             try {
                 const token = localStorage.getItem('token')
                 console.log(token)
-                const response = await axios.get('https://teamwebapp123.azurewebsites.net/api/leaves/remaining-leaves', {
+                const response = await axios.get('http://40.75.121.168:8089/api/leaves/remaining-leaves', {
                     method:'GET',
                     headers:{
                       'Authorization' : `Bearer ${token}`,
@@ -342,8 +342,8 @@ requiredFields.forEach(field => {
             const token = localStorage.getItem('token')
             console.log(formData);
             const url = isEditing
-                ? `https://teamwebapp123.azurewebsites.net/api/leaves/update/${formData.id}`
-                : `https://teamwebapp123.azurewebsites.net/api/leaves/submit`;
+                ? `http://40.75.121.168:8089/api/leaves/update/${formData.id}`
+                : `http://40.75.121.168:8089/api/leaves/submit`;
  
    
             let response;
@@ -410,7 +410,7 @@ requiredFields.forEach(field => {
         try {
             const token = localStorage.getItem('token')
             console.log(token)
-            const response = await axios.get('https://teamwebapp123.azurewebsites.net/api/leaves/remaining-leaves', {
+            const response = await axios.get('http://40.75.121.168:8089/api/leaves/remaining-leaves', {
                 method:'GET',
                 headers:{
                   'Authorization' : `Bearer ${token}`,
