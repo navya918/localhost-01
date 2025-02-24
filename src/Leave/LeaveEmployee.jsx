@@ -37,7 +37,7 @@ export default function LeaveEmployee() {
       try {
         const token = localStorage.getItem('token')
         console.log(token)
-        const response = await axios.get(`http://40.75.121.168:8089/api/leaves/employee/${employeeId}`, {
+        const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/employee/${employeeId}`, {
           headers:{
             'Authorization' : `Bearer ${token}`,
           }
@@ -124,7 +124,7 @@ export default function LeaveEmployee() {
  
   // const handleDelete = async (id) => {
   //   try {
-  //     await axios.delete(`http://localhost:8080/api/leave/delete/${id}`);
+  //     await axios.delete(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leave/delete/${id}`);
   //     setLeaveRequests((prevRequests) =>
   //       prevRequests.filter((request) => request.id !== id)
   //     );
@@ -156,7 +156,7 @@ export default function LeaveEmployee() {
     const employeeId= localStorage.getItem('employeeId');
     try {
       const token = localStorage.getItem('token')
-      const response = await axios.get(`http://40.75.121.168:8089/api/leaves/employee/${employeeId}`, {
+      const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/employee/${employeeId}`, {
         method:'GET',
         headers:{
           'Authorization' : `Bearer ${token}`,
@@ -195,7 +195,7 @@ export default function LeaveEmployee() {
     try {
       // Proceed with deletion
       const token = localStorage.getItem('token')
-      await axios.delete(`http://40.75.121.168:8089/api/leaves/delete/${deleteRequestId}`, {
+      await axios.delete(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/delete/${deleteRequestId}`, {
         method:'GET',
         headers:{
           'Authorization' : `Bearer ${token}`,
@@ -204,7 +204,7 @@ export default function LeaveEmployee() {
       });
       try {
         const token = localStorage.getItem('token')
-        const response = await axios.get(`http://40.75.121.168:8089/api/leaves/employee/${employeeId}`, {
+        const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/employee/${employeeId}`, {
           method:'GET',
           headers:{
             'Authorization' : `Bearer ${token}`,

@@ -19,7 +19,7 @@ const TimesheetSubmission = ({ setSubmissions }) => {
         SubmissionDate: new Date().toISOString(),
       };
 
-      const response = await axios.post("http://40.75.121.168:8089/api/timesheets", newFormData, {
+      const response = await axios.post("https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets", newFormData, {
         headers: {
           "Authorization": `Bearer ${token}`
         }

@@ -34,7 +34,7 @@ const UpdateContacts = () => {
         const fetchData = async () => {
 
           try {
-            const response = await axios.get(`http://40.75.121.168:8089/apis/employees/contacts/contacts/${contactId}`,{
+            const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`,{
                 headers: {
                   "Authorization": `Bearer ${token}`  // Add the token to the Authorization header
                 }
@@ -61,7 +61,7 @@ const UpdateContacts = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setIsAdding(true);
-        await axios.put(`http://localhost:8085/apis/employees/contacts/contacts/${contactId}`, formData,{
+        await axios.put(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`, formData,{
             headers: {
               "Authorization": `Bearer ${token}`  // Add the token to the Authorization header
             }

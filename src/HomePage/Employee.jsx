@@ -50,7 +50,7 @@ export default function Employee() {
         setIsUpdateModalOpen(false)
         setLoading(true);
         try {
-            const response = await fetch('http://40.75.121.168:8089/api/v1/employeeManager/employees', {
+            const response = await fetch('https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/v1/employeeManager/employees', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -86,7 +86,7 @@ export default function Employee() {
         }
 
         try {
-            const response = await fetch(`http://40.75.121.168:8089/api/v1/employeeManager/employees/${employeeId}`, {
+            const response = await fetch(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/v1/employeeManager/employees/${employeeId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
