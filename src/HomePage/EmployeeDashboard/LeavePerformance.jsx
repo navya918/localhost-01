@@ -14,7 +14,7 @@ const LeavePerformance = () => {
             const employeeId=localStorage.getItem('employeeId');
             console.log(employeeId);
           try {
-            const response = await axios.get(`https://localhost:3000/api/leaves/getStatus/${employeeId}`, {
+            const response = await axios.get(`http://localhost:8085/api/leaves/getStatus/${employeeId}`, {
                 headers: {
                   "Authorization": `Bearer ${token}`  
                 }});
