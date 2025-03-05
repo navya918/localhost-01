@@ -31,10 +31,10 @@ const EmployeeHomePage = ({ submissions, setSubmissions }) => {
 
     const fetchSubmissions = async () => {
       try {
-        let url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/list/${employeeId}`;
+        let url = `https://localhost:3000/api/timesheets/list/${employeeId}`;
 
         if (startDate && endDate) {
-          url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
+          url = `https://localhost:3000/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
         }
 
         const response = await axios.get(url, {
@@ -65,7 +65,7 @@ const EmployeeHomePage = ({ submissions, setSubmissions }) => {
 
   const handleDeleteTimesheet = async () => {
     try {
-      await axios.delete(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/delete/${selectedSubmissionId}`, {
+      await axios.delete(`https://localhost:3000/api/timesheets/delete/${selectedSubmissionId}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         }

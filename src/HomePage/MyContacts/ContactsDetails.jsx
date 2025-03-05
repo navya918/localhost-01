@@ -39,7 +39,7 @@ const ContactsDetails = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`,{
+                const response = await axios.get(`https://localhost:3000/apis/employees/contacts/contacts/${contactId}`,{
                     headers: {
                       "Authorization": `Bearer ${token}`  // Add the token to the Authorization header
                     }
@@ -63,7 +63,7 @@ const ContactsDetails = () => {
     };
 
     const deleteContact = async () => {
-        await axios.delete(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`,{
+        await axios.delete(`https://localhost:3000/apis/employees/contacts/contacts/${contactId}`,{
             headers: {
               "Authorization": `Bearer ${token}`  // Add the token to the Authorization header
             }

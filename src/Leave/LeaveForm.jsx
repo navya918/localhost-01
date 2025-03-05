@@ -75,7 +75,7 @@ function LeaveRequestForm(props) {
             const token = localStorage.getItem('token')
            
             const [originResponse] = await Promise.all([
-                axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/v1/employeeManager/origin/${employeeId}`, {
+                axios.get(`https://localhost:3000/api/v1/employeeManager/origin/${employeeId}`, {
                     method: 'GET',
                     headers: {
                       'Authorization' : `Bearer ${token}`,
@@ -151,7 +151,7 @@ function LeaveRequestForm(props) {
             try {
                 const token = localStorage.getItem('token')
                 console.log(token)
-                const response = await axios.get('https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/remaining-leaves', {
+                const response = await axios.get('https://localhost:3000/api/leaves/remaining-leaves', {
                     method:'GET',
                     headers:{
                       'Authorization' : `Bearer ${token}`,
@@ -342,8 +342,8 @@ requiredFields.forEach(field => {
             const token = localStorage.getItem('token')
             console.log(formData);
             const url = isEditing
-                ? `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/update/${formData.id}`
-                : `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/submit`;
+                ? `https://localhost:3000/api/leaves/update/${formData.id}`
+                : `https://localhost:3000/api/leaves/submit`;
  
    
             let response;
@@ -410,7 +410,7 @@ requiredFields.forEach(field => {
         try {
             const token = localStorage.getItem('token')
             console.log(token)
-            const response = await axios.get('https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/remaining-leaves', {
+            const response = await axios.get('https://localhost:3000/api/leaves/remaining-leaves', {
                 method:'GET',
                 headers:{
                   'Authorization' : `Bearer ${token}`,

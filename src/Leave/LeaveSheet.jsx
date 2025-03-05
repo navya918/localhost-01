@@ -27,7 +27,7 @@ const LeaveSheet = () => {
  const fetchLeaveSheet =  async () => {
   try{
     const token = localStorage.getItem('token')
-    const response = await axios.get("https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/getSheets", {
+    const response = await axios.get("https://localhost:3000/api/getSheets", {
         method:'GET',
         headers:{
           'Authorization' : `Bearer ${token}`,
@@ -59,7 +59,7 @@ const LeaveSheet = () => {
     try{
         const token = localStorage.getItem('token');
       if(isSubmitted && leaveId){
-        const response =  await axios.put(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/updateSheet/${leaveId}`, leaveData, {
+        const response =  await axios.put(`https://localhost:3000/api/updateSheet/${leaveId}`, leaveData, {
            
             headers:{
               'Authorization' : `Bearer ${token}`,
@@ -73,7 +73,7 @@ const LeaveSheet = () => {
           // If no data exists, create a new leave sheet
           const token = localStorage.getItem('token');
           const response = await axios.post(
-            "https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/submitSheet",
+            "https://localhost:3000/api/submitSheet",
             leaveData, {
                
                 headers:{

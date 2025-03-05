@@ -116,7 +116,7 @@ const TimesheetManagement = ({ setSubmissions ,employeeId}) => {
             console.log("Fetching data with token:", token);  // Log token for debugging
            
             const response = await axios.get(
-                `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/v1/employeeManager/getEmployee/${employeeId}`,
+                `https://localhost:3000/api/v1/employeeManager/getEmployee/${employeeId}`,
                 {
                     method: 'GET',
                     headers: {

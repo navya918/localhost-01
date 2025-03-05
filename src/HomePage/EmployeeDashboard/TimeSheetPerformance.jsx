@@ -16,7 +16,7 @@ const TimesheetPerformance = () => {
             const employeeId=localStorage.getItem('employeeId');
             console.log(employeeId);
           try {
-            const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/employeeId/${employeeId}/total/timesheets`, {
+            const response = await axios.get(`https://localhost:3000/api/timesheets/employeeId/${employeeId}/total/timesheets`, {
                 headers: {
                   "Authorization": `Bearer ${token}`  
                 }});

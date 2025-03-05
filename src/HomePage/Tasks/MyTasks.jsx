@@ -20,7 +20,7 @@ const MyTasks = props => {
     const fetchData = async () => {
 
       try {
-        const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/tasksAssignedTo/${employeeId}`,{
+        const response = await axios.get(`https://localhost:3000/apis/employees/tasksAssignedTo/${employeeId}`,{
           headers: {
             "Authorization": `Bearer ${token}`  // Add the token to the Authorization header
           }
@@ -62,13 +62,13 @@ const MyTasks = props => {
     let url;
 
     if (event.target.value === "allTasks") {
-      url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/tasksAssignedTo/${employeeId}`;
+      url = `https://localhost:3000/apis/employees/tasksAssignedTo/${employeeId}`;
     } else if (event.target.value === "overdueTasks") {
-      url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/OverdueTasks/PersonId/${employeeId}`;
+      url = `https://localhost:3000/apis/employees/OverdueTasks/PersonId/${employeeId}`;
     } else if (event.target.value === "pendingTasks") {
-      url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/PendingTasks/PersonId/${employeeId}`;
+      url = `https://localhost:3000/apis/employees/PendingTasks/PersonId/${employeeId}`;
     } else if (event.target.value === "completedTasks") {
-      url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/apis/employees/CompletedTasks/PersonId/${employeeId}`;
+      url = `https://localhost:3000/apis/employees/CompletedTasks/PersonId/${employeeId}`;
     }
 
     try {

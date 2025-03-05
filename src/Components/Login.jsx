@@ -31,7 +31,7 @@ const Login = () => {
 
         try {
             // Send login request to the backend
-            const response = await axios.post('https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/v1/employeeManager/login', {
+            const response = await axios.post('https://localhost:3000/api/v1/employeeManager/login', {
                 email: email,
                 password: password,
             });

@@ -47,7 +47,7 @@ export default function LeaveApprovalDashboard() {
       setLoading(true);
       try {
         const token = localStorage.getItem('token')
-        const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/manager/${managerId}`, {
+        const response = await axios.get(`https://localhost:3000/api/leaves/manager/${managerId}`, {
           method:'GET',
           headers:{
             'Authorization' : `Bearer ${token}`,
@@ -80,14 +80,14 @@ export default function LeaveApprovalDashboard() {
     setLoading(true);
     try {
       const token = localStorage.getItem('token')
-      await axios.put(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/approve/${id}`, null,  {
+      await axios.put(`https://localhost:3000/api/leaves/approve/${id}`, null,  {
        
         headers:{
           'Authorization' : `Bearer ${token}`,
           'Content-Type' : 'application/json'
         },
       });
-      const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/manager/${managerId}`, {
+      const response = await axios.get(`https://localhost:3000/api/leaves/manager/${managerId}`, {
        
         headers:{
           'Authorization' : `Bearer ${token}`,
@@ -129,14 +129,14 @@ export default function LeaveApprovalDashboard() {
       // Encode the rejectionReason to ensure proper handling of special characters
     //const encodedReason = encodeURIComponent(rejectionReason);
     const token = localStorage.getItem('token')
-      await axios.put(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/reject/${selectedLeaveId}/${rejectionReason}`, null,  {
+      await axios.put(`https://localhost:3000/api/leaves/reject/${selectedLeaveId}/${rejectionReason}`, null,  {
        
         headers:{
           'Authorization' : `Bearer ${token}`,
           'Content-Type' : 'application/json'
         },
       });
-      const response = await axios.get(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/leaves/manager/${managerId}`, {
+      const response = await axios.get(`https://localhost:3000/api/leaves/manager/${managerId}`, {
        
         headers:{
           'Authorization' : `Bearer ${token}`,

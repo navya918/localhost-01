@@ -33,10 +33,10 @@ const ManagerTimesheets = () => {
     if (!employeeId) return;
 
     try {
-      let url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/list/manager/${employeeId}`;
+      let url = `https://localhost:3000/api/timesheets/list/manager/${employeeId}`;
         
       if (startDate && endDate) {
-        url = `https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
+        url = `https://localhost:3000/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
       }
 
       const response = await axios.get(url, {
@@ -83,7 +83,7 @@ const ManagerTimesheets = () => {
     setLoading(true);
     console.log(token); // Make sure the token is valid here
     try {
-      await axios.put(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/Approve/${id}/status/APPROVED`, null, {
+      await axios.put(`https://localhost:3000/api/timesheets/Approve/${id}/status/APPROVED`, null, {
         headers: {
           "Authorization": `Bearer ${token}`,  // Ensure token is valid
         },
@@ -101,7 +101,7 @@ const ManagerTimesheets = () => {
   const handleReject = async () => {
     setLoading(true);
     try {
-      await axios.put(`https://web-app-0202-fjhkckdwe3f0argv.canadacentral-01.azurewebsites.net/api/timesheets/reject/${currentId}/status/REJECTED/comments/${comments}`, null, {
+      await axios.put(`https://localhost:3000/api/timesheets/reject/${currentId}/status/REJECTED/comments/${comments}`, null, {
         headers: {
           "Authorization": `Bearer ${token}`,  // Ensure the token is valid
         },
